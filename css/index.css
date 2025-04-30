@@ -1,0 +1,115 @@
+body {
+    background: #f7f7f7;
+}
+
+.head{
+    height: 88vh;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.linkc:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.contactos {
+    background: #c29c75;
+}
+
+.btn-check:checked+.btn {
+    background-color: #c29c75 !important;
+    color: white;
+}
+
+#fondo {
+    background-position: center;
+    background-size: cover;
+    transition: all .5s ease;
+    height: 35em;
+}
+
+.botonmas {
+    border: 1px solid #c29c75;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.botonmas:hover {
+    color: #c29c75;
+    border: 1px solid #c29c75;
+}
+
+
+#Traslado {
+    background-image: url(../images/transporte.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .5s ease;
+    background-repeat: no-repeat;
+}
+
+#Gastronomia {
+    background-image: url(../images/gastronomia.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .5s ease;
+    background-repeat: no-repeat;
+}
+
+#Entretenimiento {
+    background-image: url(../images/entretenimiento.webp);
+    background-position: center;
+    background-size: cover;
+    transition: all .5s ease;
+    background-repeat: no-repeat;
+}
+
+#Actividades {
+    background-image: url(../images/actividades.webp);
+    background-position: center;
+    background-size: cover;
+    transition: all .5s ease;
+    background-repeat: no-repeat;
+}
+
+.hl {
+    border-color: transparent
+}
+
+.extras{
+    height: 20em;
+}
+
+.extras:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.txtExtras, .hl{
+    transition: all 0.5s ease;
+}
+
+.extras:hover .txtExtras {
+    transform: translateY(4em);
+}
+
+.extras:hover .hl{
+    border: 3px solid #c29c75;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(5.5em);
+    width: 1px;
+}
+
+@media (max-width: 768px) {
+    .head {
+        height: 40vh;
+    }
+
+    .extras{
+        height: 10em;
+    }
+}

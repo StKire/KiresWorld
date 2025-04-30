@@ -1,0 +1,68 @@
+body{
+    background: #fff;
+}
+
+.header{
+    background-image: url(../images/nayarit/nayarit.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 92vh;
+}
+
+.deslis {
+    transition: all 0.5s ease;
+}
+
+.deslis:hover {
+    transform: translateY(20px);
+    cursor: pointer;
+}
+
+.resort{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20em;
+}
+
+#estates {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-theestates.jpg);
+}
+
+
+#grandLuxxe{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-grandluxxe.jpg);
+}
+
+#deLuxxeGrandMayan{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/resorts/deluxxe.jpg);
+}
+
+#kingdom{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/resorts/kots.jpg);
+}
+
+#bliss{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-thegrandbliss.jpg);
+}
+
+#granMayan{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-thegrandmayan.jpg);
+}
+
+#celebrePark{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/resorts/celebrate.jpg);
+}
+
+#mayanPalace{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-mayanpalace.jpg);
+}
+
+.borde{
+    border: 1px solid #c29c75;
+}
+
+.boton:hover{
+    border: 1px solid #c29c75;
+    color: #c29c75;
+}
