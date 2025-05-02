@@ -46,19 +46,19 @@ navResorts.addEventListener('click', () => {
     resortsContainer.className = `col-12 d-flex gap-1 m-auto`
     resortsContainer.innerHTML = `
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/Estates.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/the-estates-logo.svg" class="img-fluid w-100">
     </a>
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/Grand.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/grandluxxe.png" class="img-fluid w-100">
     </a>
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/DeLuxxe.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/logo-Deluxxe.svg" class="img-fluid w-100">
     </a>
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/Kingdom.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/logo-kingdom-of-the-sun.svg" class="img-fluid w-100">
     </a>
 
@@ -69,19 +69,19 @@ navResorts.addEventListener('click', () => {
     resorts2Container.className = `col-12 d-flex gap-1 m-auto justify-content-evenly`
     resorts2Container.innerHTML = `
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/Bliss.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/grandbliss.png" class="img-fluid w-100">
     </a>
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/Mayan.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/grandmayan.png" class="img-fluid w-100">
     </a>
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/Celebrate.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/logo-celebrate.svg" class="img-fluid w-100">
     </a>
 
-    <a href="" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
+    <a href="../views/Palace.html" class="btn btn-dark destinos w-100 d-flex justify-content-center align-items-center">
     <img src="../images/logos/mayanpalace.png" class="img-fluid w-100">
     </a>
     `

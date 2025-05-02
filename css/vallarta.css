@@ -3,7 +3,7 @@ body{
 }
 
 .header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/riviera/vidanta-rivieramaya-ataglance-carousel.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/vallarta/Vidanta-ataglance-puertovallarta-carousel.jpg);
     background-position: center;
     background-size: cover;
     height: 92vh;
@@ -29,24 +29,8 @@ body{
     height: 20em;
 }
 
-#estates {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/riviera/The-Estates.jpg);
-}
-
-#grandLuxxe{
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/riviera/Grand-Luxxe.jpg);
-}
-
-#bliss{
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/riviera/The-Grand-Bliss.jpg);
-}
-
-#granMayan{
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/riviera/The-Grand-Mayan.jpg);
-}
-
 #mayanPalace{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/riviera/Mayan-Palace.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vallarta/mayan-palace.jpg);
 }
 
 .borde{
