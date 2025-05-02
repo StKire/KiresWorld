@@ -6,27 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../plugins/bootstrap.min.css">
     <link rel="stylesheet" href="../css/nayarit.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <title>World Nueva Nayarit - Nueva Vallarta</title>
     <link rel="icon" href="../images/logo.png" type="image/png">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <header
-        class="head top-0 start-0 w-100 position-relative header d-flex justify-content-center align-items-center flex-column text-light gap-0">
-        <h2 style="font-size: 3em;" class="mt-auto">Nuevo Nayarit - Vallarta</h2>
-        <hr class="w-25">
-        <span class="fs-5">En un Vistazo</span>
-
-        <div class="mt-auto mb-5 fs-1 deslis">
-            <ion-icon name="caret-down-outline"></ion-icon>
+    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-flex d-lg-none flex-wrap w-100 z-3">
+        <div class="container nav-justified">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../images/logo.png" alt="" style="width: 50px;">
+            </a>
+            <div class="navbar-brand text-center contactos text-white px-2" style="background: #c29c75;">
+                <span class="linkc fs-6">55-7076-0820</span>
+                <p><span class="linkc fs-6">Contactanos</span> | <span class="linkc fs-6">Noticias</span></p>
+            </div>
+            <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span>
+                    <ion-icon name="menu-outline" class="text-white"></ion-icon>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto w-100 h-100">
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Destinos
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/nayarit.html">Nuevo
+                                        Nayarit-Vallarta</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/riviera.html">Riviera
+                                        Maya</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/cabos.html">Los Cabos</a>
+                                </li>
+                                <li><a class="btn text-white btn-dark nav-link"
+                                        href="../views/acapulco.html">Acapulco</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/puerto.html">Puerto
+                                        Peñasco</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/vallarta.html">Puerto
+                                        Vallarta</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Resorts
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Estates</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Grand Luxxe</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">DeLuxxe At The Grand Mayan</a>
+                                </li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Kingdom Of The Sun</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Grand Bliss</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Grand Mayan</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Celebrate Park</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Bliss</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Mayan Palace</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Entretenimiento</a></li>
+                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Gastronomia</a></li>
+                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Transporte</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Eventos
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Grupos y Eventos</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Bodas</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="btn text-white btn-dark nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                Iniciar Sesion
+                            </button>
+                            <div class="dropdown-menu bg-dark border-0 p-4 text-white">
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormEmail2" class="form-label">Correo Electronico</label>
+                                    <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+                                        placeholder="email@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword2"
+                                        placeholder="Password">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                        <label class="form-check-label" for="dropdownCheck2">
+                                            Recordar Contraseña
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-light btnIngresar">Ingresar</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-flex flex-wrap w-100 z-3 position-sticky top-0">
+
+    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-none d-lg-flex flex-wrap w-100 z-3 position-sticky top-0"
+        style="z-index: 1060 !important;">
         <div class="container nav-justified">
             <a href="../index.html" class="navbar-brand">
                 <img src="../images/logo.png" alt="" style="width: 50px;">
@@ -42,17 +141,60 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto w-100 h-100">
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Destinos</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Resort</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Entretenimiento</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Gastronomia</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Transporte</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Eventos</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Acerca de</a></li>
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navDestinos">Destinos</button>
+                    </li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navResorts">Resorts</button>
+                    </li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Entretenimiento</a></li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Gastronomia</a></li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Transporte</a></li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navEventos">Eventos</button>
+                    </li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navLogin">Iniciar
+                            Sesion</button></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Offcanvas Top -->
+    <div class="offcanvas offcanvas-top h-75 w-75 mx-auto" tabindex="-1" id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header bg-dark text-white mt-5 pt-5">
+            <h5 class="offcanvas-title w-100 text-center" id="offcanvasTopLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-dark text-white">
+            <div class="container h-75">
+                <div class="row h-100 " id="navOffcanvas">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header
+        class="head top-0 start-0 w-100 position-relative header d-flex justify-content-center align-items-center flex-column text-light gap-0">
+        <h2 style="font-size: 3em;" class="mt-auto">Nuevo Nayarit - Vallarta</h2>
+        <hr class="w-25">
+        <span class="fs-5">En un Vistazo</span>
+
+        <div class="mt-auto mb-5 fs-1 deslis">
+            <ion-icon name="caret-down-outline"></ion-icon>
+        </div>
+    </header>
+
 
     <main class="row my-5 ">
         <div class="col-lg-7 col-md-12 mx-auto row">
@@ -65,7 +207,7 @@
                 piscinas, y la nueva área de Beachland.</p>
         </div>
 
-        <div id="carouselExample" class="carousel slide col-lg-6 mx-auto col-md-12 my-5" style="height: 30em;">
+        <div id="carouselExample" class="carousel slide col-lg-6 mx-auto col-md-12 my-lg-5">
             <div class="carousel-inner h-100">
                 <div class="carousel-item active">
                     <img src="../images/nayarit/vidanta-nuevovallarta-ataglance-gallery-1.jpg" class="img-fluid w-100"
@@ -146,215 +288,244 @@
             </button>
         </div>
 
-        <div class="col-lg-7 col-md-12 mx-auto d-none d-lg-flex row" style="background: #f7f7f7;">
-            <h4 class="col-12 text-center mb-3">Hoteles Resort</h4>
+        <div class="col-lg-9 col-md-12 mx-auto pb-3 row rounded-3" style="background: #f7f7f7;">
+            <h4 class="col-12 text-center mb-3 fs-2">Hoteles Resort</h4>
             <div class="d-flex col-12 gap-1 mb-1">
-                <button class="btn btn-dark d-flex flex-column resort w-50 mx-auto" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseEstates" aria-expanded="false"
-                    aria-controls="collapseEstates" id="estates">
-
-                    <span class="w-100 mt-3 text-center text-light fs-4">Estates Resort</span>
-
-                    <div class="collapse my-5 mx-4" id="collapseEstates">
-                        <div class="card card-body bg-transparent text-white borde">
-                            Nuestro proyecto mas suntuoso a la fecha, en donde el maximo lujo, se encuentra con la
-                            maxima naturaleza.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="estates.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-white">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-50 mx-auto text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasEstates" aria-controls="offcanvasEstates" id="estates">
+                    <h3 class="text-light fs-4">The Estates</h3>
                 </button>
 
-                <button class="btn btn-dark d-flex flex-column resort w-50 mx-auto" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseGrandLuxxe" aria-expanded="false"
-                    aria-controls="collapseGrandLuxxe" id="grandLuxxe">
-
-                    <span class="w-100 mt-3 text-center text-light fs-4">Grand Luxxe</span>
-
-                    <div class="collapse my-5 mx-4" id="collapseGrandLuxxe">
-                        <div class="card card-body bg-transparent text-white borde">
-                            Este hotel resort de Cinco Diamantes, ofrece una experiencia de lujo de inicio a fin.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="grandluxxe.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-50 mx-auto text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasGrandLuxxe" aria-controls="offcanvasGrandLuxxe" id="grandLuxxe">
+                    <h3 class="text-light fs-4">Grand Luxxe</h3>
                 </button>
             </div>
 
             <div class="d-flex col-12 gap-1 mb-1">
-                <button class="btn btn-dark d-flex flex-column resort w-100" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseDeLuxxeGrandMayan" aria-expanded="false"
-                    aria-controls="collapseDeLuxxeGrand" id="deLuxxeGrandMayan">
-
-                    <span class="w-100 mt-3 text-center text-light fs-4 px-3">DeLuxxe at Grand Mayan</span>
-
-                    <div class="collapse my-2 mx-1" id="collapseDeLuxxeGrandMayan">
-                        <div class="card card-body bg-transparent text-white borde">
-                            Llevamos el lujo a un nuevo nivel. <br>Disfrute una estadia inolvidable, en el centro de toda la accion.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="grandmayan.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-100 text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDeLuxxeGrandMayan" aria-controls="offcanvasDeLuxxeGrand"
+                    id="deLuxxeGrandMayan">
+                    <h3 class="text-light fs-4">DeLuxxe at Grand Mayan</h3>
                 </button>
-                <button class="btn btn-dark d-flex flex-column resort w-100" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseKingdom" aria-expanded="false"
-                aria-controls="collapseKingdom" id="kingdom">
-                    <span class="w-100 mt-3 text-center text-light fs-4 px-3">Kingdom of the Sun</span>
 
-                    <div class="collapse my-4 mx-1" id="collapseKingdom">
-                        <div class="card card-body bg-transparent text-white borde">
-                            Un espacio unico donde encontrara un resort de playa de la mas alta calidad y un lujoso parque tematico.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="kingdom.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-100 text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasKingdom" aria-controls="offcanvasKingdom" id="kingdom">
+                    <h3 class="text-light fs-4">Kingdom of the Sun</h3>
                 </button>
-                <button class="btn btn-dark d-flex flex-column resort w-100" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseBliss" aria-expanded="false"
-                aria-controls="collapseBliss" id="bliss">
-                    <span class="w-100 mt-3 text-center text-light fs-4 px-3">The Grand Bliss</span>
 
-                    <div class="collapse my-4 mx-1" id="collapseBliss">
-                        <div class="card card-body bg-transparent text-white borde">
-                            Este lujoso y moderno Resort ofrece un espacio sofisticado y lleno de estilo para vacacionar.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="blissresorts.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-100 text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasBliss" aria-controls="offcanvasBliss" id="bliss">
+                    <h3 class="text-light fs-4">The Grand Bliss</h3>
                 </button>
             </div>
-
 
             <div class="d-flex col-12 gap-1">
-                <button class="btn btn-dark d-flex flex-column resort w-100" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseGrandMayan" aria-expanded="false"
-                aria-controls="collapseGrandMayan" id="granMayan">
-                    <span class="w-100 mt-3 text-center text-light fs-4 px-3">The Grand Mayan</span>
-
-                    <div class="collapse my-4 mx-1" id="collapseGrandMayan">
-                        <div class="card card-body bg-transparent text-white borde">
-                            Un refugio lleno de comodidad, relajacion y lujo para toda la familia.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="grandmayan.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-100 text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasGrandMayan" aria-controls="offcanvasGrandMayan" id="granMayan">
+                    <h3 class="text-light fs-4">The Grand Mayan</h3>
                 </button>
-                <button class="btn btn-dark d-flex flex-column resort w-100"  type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseCelebrePark" aria-expanded="false"
-                aria-controls="collapseCelebrePark" id="celebrePark">
-                    <span class="w-100 mt-3 text-center text-light fs-4 px-3">Celebre Park</span>
 
-                    <div class="collapse my-4 mx-1" id="collapseCelebrePark">
-                        <div class="card card-body bg-transparent text-white borde">
-                            un alojamiento espectacular con un rapido y facil acceso a nuestros proximos parques.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="celebrepark.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-100 text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasCelebrePark" aria-controls="offcanvasCelebrePark" id="celebrePark">
+                    <h3 class="text-light fs-4">Celebre Park</h3>
                 </button>
-                <button class="btn btn-dark d-flex flex-column resort w-100" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseMayanPalace" aria-expanded="false"
-                aria-controls="collapseMayanPalace" id="mayanPalace">
-                    <span class="w-100 mt-3 text-center text-light fs-4 px-3">Mayan Palace</span>
 
-                    <div class="collapse my-4 mx-1" id="collapseMayanPalace">
-                        <div class="card card-body bg-transparent text-white borde">
-                            Uno de los favoritos de familias de todo el mundo que cuenta con alojamientos frescos y espaciosos.
-                            <div class="d-flex justify-content-between mt-3 mx-auto">
-                                <a href="mayanpalace.html"
-                                    class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                                    Información</a>
-                            </div>
-                        </div>
-                    </div>
+                <button class="btn btn-dark resort w-100 text-center" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMayanPalace" aria-controls="offcanvasMayanPalace" id="mayanPalace">
+                    <h3 class="text-light fs-4">Mayan Palace</h3>
                 </button>
             </div>
         </div>
 
-        <!-- Offcanvas for Mobile -->
-<div class="d-lg-none">
-    <button class="btn btn-dark d-flex flex-column resort w-100 mb-2" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasGrandMayan" aria-controls="offcanvasGrandMayan" id="granMayan">
-        <span class="w-100 mt-3 text-center text-light fs-4 px-3">The Grand Mayan</span>
-    </button>
-    <div class="offcanvas offcanvas-bottom text-bg-dark" tabindex="-1" id="offcanvasGrandMayan"
-        aria-labelledby="offcanvasGrandMayanLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasGrandMayanLabel">The Grand Mayan</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <p>Un refugio lleno de comodidad, relajación y lujo para toda la familia.</p>
-            <div class="d-flex justify-content-between mt-3 mx-auto">
-                <a href="grandmayan.html" class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                    Información</a>
+        <!-- Offcanvas con diseño de 6+6 columnas -->
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasEstates" data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <!-- Columna para la imagen -->
+                    <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-theestates.jpg"
+                            alt="Estates Resort" class="img-fluid w-75">
+                    </div>
+                    <!-- Columna para la información -->
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">The Estates</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Nuestro
+                            proyecto más suntuoso a la fecha, en donde el máximo lujo se encuentra
+                            con la máxima naturaleza.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="estates.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <button class="btn btn-dark d-flex flex-column resort w-100 mb-2" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasCelebrePark" aria-controls="offcanvasCelebrePark" id="celebrePark">
-        <span class="w-100 mt-3 text-center text-light fs-4 px-3">Celebre Park</span>
-    </button>
-    <div class="offcanvas offcanvas-bottom text-bg-dark" tabindex="-1" id="offcanvasCelebrePark"
-        aria-labelledby="offcanvasCelebreParkLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasCelebreParkLabel">Celebre Park</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <p>Un alojamiento espectacular con un rápido y fácil acceso a nuestros próximos parques.</p>
-            <div class="d-flex justify-content-between mt-3 mx-auto">
-                <a href="celebrepark.html" class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                    Información</a>
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasGrandLuxxe" data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-grandluxxe.jpg"
+                            alt="Grand Luxxe" class="img-fluid w-75">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">Grand Luxxe</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Este hotel
+                            resort de Cinco Diamantes ofrece una experiencia de lujo de inicio a
+                            fin.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="grandluxxe.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <button class="btn btn-dark d-flex flex-column resort w-100 mb-2" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasMayanPalace" aria-controls="offcanvasMayanPalace" id="mayanPalace">
-        <span class="w-100 mt-3 text-center text-light fs-4 px-3">Mayan Palace</span>
-    </button>
-    <div class="offcanvas offcanvas-bottom text-bg-dark" tabindex="-1" id="offcanvasMayanPalace"
-        aria-labelledby="offcanvasMayanPalaceLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasMayanPalaceLabel">Mayan Palace</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <p>Uno de los favoritos de familias de todo el mundo que cuenta con alojamientos frescos y espaciosos.</p>
-            <div class="d-flex justify-content-between mt-3 mx-auto">
-                <a href="mayanpalace.html" class="btn btn-light bg-dark text-decoration-none borde text-light">Más
-                    Información</a>
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasDeLuxxeGrandMayan"
+            data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/deluxxe.jpg" alt="DeLuxxe at Grand Mayan" class="img-fluid w-75">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">DeLuxxe at Grand Mayan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Llevamos el
+                            lujo a un nuevo nivel. Disfrute una estadía inolvidable en el centro
+                            de toda la acción.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="grandmayan.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-</div>
+
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasKingdom" data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/kots.jpg" alt="Kingdom of the Sun" class="img-fluid w-75">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">Kingdom of the Sun</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Un espacio
+                            unico donde encontrara un resort de playa de la mas alta calidad y un lujoso parque
+                            tematico.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="kingdom.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasBliss" data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-thegrandbliss.jpg"
+                            alt="The Grand Bliss" class="img-fluid w-75">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">The Grand Bliss</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Este lujoso y
+                            moderno Resort ofrece un espacio sofisticado y lleno de estilo para vacacionar.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="bliss.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasGrandMayan" data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-thegrandmayan.jpg"
+                            alt="The Grand Mayan" class="img-fluid w-75">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">The Grand Mayan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Un refugio
+                            lleno de comodidad, relajacion y lujo para toda la familia.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="grandmayan.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasCelebrePark" data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/celebrate.jpg" alt="Celebre Park" class="img-fluid w-75">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">Celebre Park</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Un
+                            alojamiento espectacular con un rapido y facil acceso a nuestros proximos parques.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="celebrepark.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="offcanvasMayanPalace" data-bs-backdrop="static">
+            <div class="offcanvas-body container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                        <img src="../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-mayanpalace.jpg"
+                            alt="Mayan Palace" class="img-fluid w-75">
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2 text-center w-100">Mayan Palace</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="fs-5 h-100 d-flex align-items-center justify-content-center text-center">Uno de los
+                            favoritos de familias de todo el mundo que cuenta con alojamientos frescos y espaciosos.</p>
+                        <div class="mt-auto pt-3">
+                            <a href="mayanpalace.html" class="btn btn-dark btn-lg w-100">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="text-white pt-5" style="background: #434343;">
@@ -399,17 +570,17 @@
     <section class="d-none d-lg-block row" style="background: #252525;">
         <div class="col-7 mx-auto">
             <div class="w-100 d-flex gap-1">
-                <button class="btn w-100 h-75 my-auto"><img src="./images/zonas/estates.svg" alt="Estates Resort"
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/estates.svg" alt="Estates Resort"
                         class="img-fluid object-fit-cover"></button>
-                <button class="btn w-100 h-75 my-auto"><img src="./images/zonas/grandluxxe.svg" alt="Grand Luxxe Resort"
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/grandluxxe.svg"
+                        alt="Grand Luxxe Resort" class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/grandbliss.svg"
+                        alt="Grand Bliss Resort" class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/grandmayan.svg"
+                        alt="Grand Mayan Resort" class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/blissresorts.svg" alt="Bliss Resorts"
                         class="img-fluid object-fit-cover"></button>
-                <button class="btn w-100 h-75 my-auto"><img src="./images/zonas/grandbliss.svg" alt="Grand Bliss Resort"
-                        class="img-fluid object-fit-cover"></button>
-                <button class="btn w-100 h-75 my-auto"><img src="./images/zonas/grandmayan.svg" alt="Grand Mayan Resort"
-                        class="img-fluid object-fit-cover"></button>
-                <button class="btn w-100 h-75 my-auto"><img src="./images/zonas/blissresorts.svg" alt="Bliss Resorts"
-                        class="img-fluid object-fit-cover"></button>
-                <button class="btn w-100 h-75 my-auto"><img src="./images/zonas/mayanpalace.svg"
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/mayanpalace.svg"
                         alt="Mayan Palace Resort" class="img-fluid object-fit-cover"></button>
             </div>
         </div>
@@ -420,5 +591,6 @@
 
 </body>
 <script src="../plugins/bootstrap.bundle.js"></script>
+<script src="../js/nav.js"></script>
 
 </html>

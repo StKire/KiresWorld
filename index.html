@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="plugins/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <link rel="icon" href="./images/logo.png" type="image/png">
     <title>Home - Kires's World</title>
 </head>
@@ -70,15 +71,12 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-flex flex-wrap w-100 z-3">
-        <div class="bg-black text-white text-center py-2 w-100">
-            <h2 class="link fs-5">VIVE LA SERIE DE CONCIERTOS KIRE'S CITY</h2>
-        </div>
+    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-flex d-lg-none flex-wrap w-100 z-3">
         <div class="container nav-justified">
             <a href="./index.html" class="navbar-brand">
                 <img src="./images/logo.png" alt="" style="width: 50px;">
             </a>
-            <div class="navbar-brand text-center contactos text-white px-2">
+            <div class="navbar-brand text-center contactos text-white px-2" style="background: #c29c75;">
                 <span class="linkc fs-6">55-7076-0820</span>
                 <p><span class="linkc fs-6">Contactanos</span> | <span class="linkc fs-6">Noticias</span></p>
             </div>
@@ -89,17 +87,150 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto w-100 h-100">
-                    <li class="nav-item"><a href="#destinos" class="btn text-white btn-dark nav-link">Destinos</a></li>
-                    <li class="nav-item"><a href="#resort" class="btn text-white btn-dark nav-link">Resort</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Destinos
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="./views/nayarit.html">Nuevo Nayarit-Vallarta</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="./views/riviera.html">Riviera Maya</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="./views/cabos.html">Los Cabos</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="./views/acapulco.html">Acapulco</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="./views/puerto.html">Puerto Peñasco</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="./views/vallarta.html">Puerto Vallarta</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Resorts
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Estates</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Grand Luxxe</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">DeLuxxe At The Grand Mayan</a>
+                                </li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Kingdom Of The Sun</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Grand Bliss</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Grand Mayan</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Celebrate Park</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">The Bliss</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Mayan Palace</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Entretenimiento</a></li>
                     <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Gastronomia</a></li>
                     <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Transporte</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Eventos</a></li>
-                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Acerca de</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Eventos
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Grupos y Eventos</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Bodas</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="btn text-white btn-dark nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                Iniciar Sesion
+                            </button>
+                            <div class="dropdown-menu bg-dark border-0 p-4 text-white">
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormEmail2" class="form-label">Correo Electronico</label>
+                                    <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+                                        placeholder="email@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword2"
+                                        placeholder="Password">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                        <label class="form-check-label" for="dropdownCheck2">
+                                            Recordar Contraseña
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-light btnIngresar">Ingresar</button>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
+    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-none d-lg-flex flex-wrap w-100 z-3 position-sticky top-0"
+        style="z-index: 1060 !important;">
+        <div class="container nav-justified">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../images/logo.png" alt="" style="width: 50px;">
+            </a>
+            <div class="navbar-brand text-center text-white px-2" style="background: #c29c75;">
+                <span class="linkc fs-6">55-7076-0820</span>
+                <p><span class="linkc fs-6">Contactanos</span> | <span class="linkc fs-6">Noticias</span></p>
+            </div>
+            <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span>
+                    <ion-icon name="menu-outline" class="text-white"></ion-icon>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto w-100 h-100">
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navDestinos">Destinos</button>
+                    </li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navResorts">Resorts</button>
+                    </li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Entretenimiento</a></li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Gastronomia</a></li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Transporte</a></li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navEventos">Eventos</button>
+                    </li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navLogin">Iniciar Sesion</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Top -->
+    <div class="offcanvas offcanvas-top h-75 w-75 mx-auto" tabindex="-1" id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header bg-dark text-white mt-5 pt-5">
+            <h5 class="offcanvas-title w-100 text-center" id="offcanvasTopLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-dark text-white">
+            <div class="container h-75">
+                <div class="row h-100 " id="navOffcanvas">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main class=" mx-auto row">
         <section class=" col-lg-6 col-md-12 container-lg my-3 pt-5">
@@ -323,6 +454,7 @@
     </div>
 
 </body>
+<script src="./js/navMain.js"></script>
 <script src="./js/Destinos.js"></script>
 <script src="plugins/bootstrap.bundle.js"></script>
 

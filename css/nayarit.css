@@ -3,7 +3,7 @@ body{
 }
 
 .header{
-    background-image: url(../images/nayarit/nayarit.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/nayarit/nayarit.jpg);
     background-position: center;
     background-size: cover;
     height: 92vh;
@@ -18,6 +18,10 @@ body{
     cursor: pointer;
 }
 
+.carousel{
+    height: 30em;
+}
+
 .resort{
     background-position: center;
     background-size: cover;
@@ -28,7 +32,6 @@ body{
 #estates {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-theestates.jpg);
 }
-
 
 #grandLuxxe{
     background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/resorts/vidanta-nuevovallarta-ataglance-resorthotels-grandluxxe.jpg);
@@ -65,4 +68,24 @@ body{
 .boton:hover{
     border: 1px solid #c29c75;
     color: #c29c75;
+}
+
+@media (max-width: 768px) {
+    .header{
+        background-image: url(../images/nayarit/nayarit.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel{
+        height: 15em;
+    }
+
+    .resort{
+        height: 10em;
+    }
 }

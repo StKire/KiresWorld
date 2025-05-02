@@ -1,0 +1,70 @@
+body{
+    background: #fff;
+}
+
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../images/riviera/vidanta-rivieramaya-ataglance-carousel.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 92vh;
+}
+
+.deslis {
+    transition: all 0.5s ease;
+}
+
+.deslis:hover {
+    transform: translateY(20px);
+    cursor: pointer;
+}
+
+.carousel{
+    height: 30em;
+}
+
+.resort{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20em;
+}
+
+#estates {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/riviera/The-Estates.jpg);
+}
+
+#grandLuxxe{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/riviera/Grand-Luxxe.jpg);
+}
+
+#bliss{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/riviera/The-Grand-Bliss.jpg);
+}
+
+#granMayan{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/riviera/The-Grand-Mayan.jpg);
+}
+
+#mayanPalace{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/riviera/Mayan-Palace.jpg);
+}
+
+@media (max-width: 768px) {
+    .header{
+        background-image: url(../images/nayarit/nayarit.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel{
+        height: 15em;
+    }
+
+    .resort{
+        height: 10em;
+    }
+}

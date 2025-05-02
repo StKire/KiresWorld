@@ -1,0 +1,42 @@
+
+.destinos{
+    width: 15em;
+    height: 10em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.eventos{
+    height: 30em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#navGruposEventos{
+    background-image: url(../images/Events.jpg);
+}
+#navBodas{
+    background-image: url(../images/Weddings_img.jpg);
+}
+
+#nayarit{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/zonas/nayarit.jpg);
+    
+}
+#riviera{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/zonas/riviera.jpg);
+}
+#cabos{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/zonas/cabos.jpg);
+}
+#acapulco{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/zonas/acapulco.jpg);
+}
+#puerto{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/zonas/puerto.jpg);
+}
+#vallarta{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/zonas/vallarta.jpg);
+}
