@@ -1,0 +1,26 @@
+body{
+    background: #fff;
+}
+
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(../images/resorts/estates/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 25vh;
+}
+
+.carousel{
+    height: 30em;
+}
+
+.habitaciones{
+    background: #f7f7f7;
+}
+
+
+@media (max-width: 768px) {
+    .carousel{
+        height: 15em;
+    }
+
+}
