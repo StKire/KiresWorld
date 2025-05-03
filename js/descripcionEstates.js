@@ -1,3 +1,5 @@
+import { buscarDocumentosPorCampo } from '../js/firebase/crud.js'
+
 const btnUnaHabitacion = document.getElementById('btnUnaHabitacion');
 const btnDosHabitaciones = document.getElementById('btnDosHabitaciones');
 const btnTresHabitaciones = document.getElementById('btnTresHabitaciones');
@@ -55,13 +57,31 @@ btnUnaHabitacion.addEventListener('click', () => {
                 class="col-6 text-capitalize text-center d-flex justify-content-center align-items-center flex-column">
                 Precio por noche <br>
                 <span class="text-black fw-bold">$11,340 MXN</span>
-                <button class="btn btn-dark" id="btnVerificarUna">Verificar Disponibilidad</button>
+                <button class="btn btn-dark" id="btnVerificarUno">Verificar Disponibilidad</button>
+                <span id="disponibilidad"></span>
                 <button type="button" class="btn btn-dark mt-2" data-bs-dismiss="modal" id="btnReservarUna">Reservar Habitacion</button>
             </div>
         </div>
     `;
-    roomDetailsModalLabel.textContent ='The Estates de Una Recamara';
+
+    roomDetailsModalLabel.textContent = 'The Estates de Una Recamara';
     cuerpoModal.appendChild(suite);
+    const btnVerificarUna = document.getElementById('btnVerificarUno');
+    btnVerificarUna.addEventListener('click', async () => {
+        const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "una habitacion");
+        const disponibles = habitaciones.filter(habitacion => habitacion.estado === "disponible").length;
+        console.log(disponibles);
+
+        const disponibilidad = document.getElementById('disponibilidad');
+        if (disponibles != 0) {
+            disponibilidad.className = 'text-success';
+            disponibilidad.textContent = `Hay ${disponibles} Habitaciones Disponibles.`;
+        } else {
+            disponibilidad.className = 'text-danger';
+            disponibilidad.textContent = `Lo Sentimos, Hay ${disponibles} Habitaciones Disponibles`;
+        }
+
+    })
 });
 
 btnDosHabitaciones.addEventListener('click', () => {
@@ -129,12 +149,29 @@ btnDosHabitaciones.addEventListener('click', () => {
                 Precio por noche <br>
                 <span class="text-black fw-bold">$13,020 MXN</span>
                 <button class="btn btn-dark" id="btnVerificarDos">Verificar Disponibilidad</button>
+                <span id="disponibilidad"></span>
                 <button type="button" class="btn btn-dark mt-2" data-bs-dismiss="modal" id="btnReservarDos">Reservar Habitacion</button>
             </div>
         </div>
     `;
-    roomDetailsModalLabel.textContent ='The Estates de Dos Recamaras';
+    roomDetailsModalLabel.textContent = 'The Estates de Dos Recamaras';
     cuerpoModal.appendChild(suite);
+
+    const btnVerificarDos = document.getElementById('btnVerificarDos');
+    btnVerificarDos.addEventListener('click', async () => {
+        const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "dos habitaciones");
+        const disponibles = habitaciones.filter(habitacion => habitacion.estado === "disponible").length;
+        console.log(disponibles);
+
+        const disponibilidad = document.getElementById('disponibilidad');
+        if (disponibles != 0) {
+            disponibilidad.className = 'text-success';
+            disponibilidad.textContent = `Hay ${disponibles} Habitaciones Disponibles.`;
+        } else {
+            disponibilidad.className = 'text-danger';
+            disponibilidad.textContent = `Lo Sentimos, Hay ${disponibles} Habitaciones Disponibles`
+        }
+    })
 });
 
 btnTresHabitaciones.addEventListener('click', () => {
@@ -207,12 +244,28 @@ btnTresHabitaciones.addEventListener('click', () => {
                 Precio por noche <br>
                 <span class="text-black fw-bold">$14,490 MXN</span>
                 <button class="btn btn-dark" id="btnVerificarTres">Verificar Disponibilidad</button>
+                <span id="disponibilidad"></span>
                 <button type="button" class="btn btn-dark mt-2" data-bs-dismiss="modal" id="btnReservarTres">Reservar Habitacion</button>
             </div>
         </div>
     `;
-    roomDetailsModalLabel.textContent ='The Estates de Tres Recamaras';
+    roomDetailsModalLabel.textContent = 'The Estates de Tres Recamaras';
     cuerpoModal.appendChild(suite);
+    const btnVerificarTres = document.getElementById('btnVerificarTres');
+    btnVerificarTres.addEventListener('click', async () => {
+        const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "tres habitaciones");
+        const disponibles = habitaciones.filter(habitacion => habitacion.estado === "disponible").length;
+        console.log(disponibles);
+
+        const disponibilidad = document.getElementById('disponibilidad');
+        if (disponibles != 0) {
+            disponibilidad.className = 'text-success';
+            disponibilidad.textContent = `Hay ${disponibles} Habitaciones Disponibles.`;
+        } else {
+            disponibilidad.className = 'text-danger';
+            disponibilidad.textContent = `Lo Sentimos, Hay ${disponibles} Habitaciones Disponibles`
+        }
+    })
 });
 
 btnCuatroHabitaciones.addEventListener('click', () => {
@@ -285,11 +338,28 @@ btnCuatroHabitaciones.addEventListener('click', () => {
                 Precio por noche <br>
                 <span class="text-black fw-bold">$17,010 MXN</span>
                 <button class="btn btn-dark" id="btnVerificarCuatro">Verificar Disponibilidad</button>
+                <span id="disponibilidad"></span>
                 <button type="button" class="btn btn-dark mt-2" data-bs-dismiss="modal" id="btnReservarCuatro">Reservar Habitacion</button>
             </div>
         </div>
     `;
-    roomDetailsModalLabel.textContent ='The Estates de Cuatro Recamaras';
+    roomDetailsModalLabel.textContent = 'The Estates de Cuatro Recamaras';
     cuerpoModal.appendChild(suite);
+
+    const btnVerificarCuatro = document.getElementById('btnVerificarCuatro');
+    btnVerificarCuatro.addEventListener('click', async () => {
+        const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "cuatro habitaciones");
+        const disponibles = habitaciones.filter(habitacion => habitacion.estado === "disponible").length;
+        console.log(disponibles);
+
+        const disponibilidad = document.getElementById('disponibilidad');
+        if (disponibles != 0) {
+            disponibilidad.className = 'text-success';
+            disponibilidad.textContent = `Hay ${disponibles} Habitaciones Disponibles.`;
+        } else {
+            disponibilidad.className = 'text-danger';
+            disponibilidad.textContent = `Lo Sentimos, Hay ${disponibles} Habitaciones Disponibles`
+        }
+    })
 });
 
