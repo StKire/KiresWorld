@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/estates.css">
     <link rel="stylesheet" href="../css/nav.css">
-    <title>
-        World The Estates
-    </title>
+    <link rel="stylesheet" href="../css/reservaEstates.css">
     <link rel="icon" href="../images/logo.png" type="image/png">
+    <title>World The Estates - Reservacion</title>
 </head>
 
 <body class="overflow-x-hidden">
@@ -191,7 +189,6 @@
             </div>
         </div>
     </div>
-
     <header
         class="head top-0 start-0 w-100 position-relative header d-flex justify-content-center align-items-center flex-column text-light gap-0">
         <h2 style="font-size: 3em;" class="">The Estates</h2>
@@ -208,160 +205,82 @@
                 nutre el alma y comodidad absoluta.</p>
             <img src="../images/logos/the-estates-logo.svg" alt="" class="w-25 mx-auto mb-3 mt-2 img-fluid bg-black">
         </div>
-
-        <div id="carouselExample" class="carousel slide col-lg-6 mx-auto col-md-12 my-lg-5">
-            <div class="carousel-inner h-100">
-                <div class="carousel-item active">
-                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-1.jpg"
-                        class="img-fluid w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-2.jpg"
-                        class="img-fluid w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-3.jpg"
-                        class="img-fluid w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-4.jpg"
-                        class="img-fluid w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-5.jpg"
-                        class="img-fluid w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
         <section class="col-lg-8 col-md-12 p-3 mx-auto row">
-            <h3 class="w-100 text-center mb-3">Habitaciones y Suites</h3>
-
-            <div class="col-12 row mb-3 mx-auto">
-
-                <img src="../images/resorts/estates/unaHabitacion.jpg" alt=""
-                    class="col-lg-6 col-md-12 rounded-start-3">
-
-                <div class="col-lg-6 col-md-12 habitaciones rounded-end-3 row p-3">
-                    <p class="col-12 mt-auto">
-                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
-                        <span class="text-capitalize text-black fs-4">The Estates de Una Recamara</span>
-                    </p>
-                    <hr class="col-2">
-                    <p>Este impresionante espacio cuenta con una cocina gourmet con comedor, un dormitorio, dos baños y
-                        una gran terraza privada.</p>
-                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
-                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnUnaHabitacion">
-                        detalles completos de la habitacion<ion-icon class="ms-1"
-                            name="chevron-forward-outline"></ion-icon>
-                    </button>
+            <h3 class="w-100 text-center mb-3">Reserva tu Estadía</h3>
+            <form id="reservationForm" class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPhone" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="inputPhone" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCheckIn" class="form-label">Fecha de Llegada</label>
+                    <input type="date" class="form-control" id="inputCheckIn" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCheckOut" class="form-label">Fecha de Salida</label>
+                    <input type="date" class="form-control" id="inputCheckOut" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="disabledTextInput" class="form-label">Tipo de Suite</label>
+                    <input type="text" id="lblSuite" class="form-control text-capitalize" disabled>
                 </div>
 
-            </div>
+                <hr class="mt-5">
 
-            <div class="col-12 row mb-3 mx-auto">
-                <div class="col-lg-6 col-md 12 habitaciones rounded-start-3 row p-3">
-                    <p class="col-12 mt-auto">
-                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
-                        <span class="text-capitalize text-black fs-4">The Estates de dos habitaciones</span>
-                    </p>
-                    <hr class="col-2">
-                    <p>Este increíble espacio ofrece una cocina gourmet con comedor, dos recámaras, tres baños y una
-                        terraza privada con una pequeña piscina..</p>
-                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
-                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnDosHabitaciones">
-                        detalles completos de la habitacion<ion-icon class="ms-1"
-                            name="chevron-forward-outline"></ion-icon>
-                    </button>
+                <div class="col-12 mt-4">
+                    <h4 class="text-center">Método de Pago</h4>
                 </div>
-                <img src="../images/resorts/estates/doshabitaciones.jpg" alt=""
-                    class="col-lg-6 col-md-12 rounded-end-3">
-            </div>
-
-            <div class="col-12 row mb-3 mx-auto">
-                <img src="../images/resorts/estates/treshabitaciones.jpg" alt=""
-                    class="col-lg-6 col-md-12 rounded-start-3">
-
-                <div class="col-lg-6 col-md-12 habitaciones rounded-end-3 row p-3">
-                    <p class="col-12 mt-auto">
-                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
-                        <span class="text-capitalize text-black fs-4">The Estates de tres habitaciones</span>
-                    </p>
-                    <hr class="col-2">
-                    <p>Este lujoso espacio ofrece una cocina gourmet con comedor, tres recámaras, cinco baños y una
-                        terraza privada con una pequeña piscina.</p>
-                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
-                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnTresHabitaciones">
-                        detalles completos de la habitacion<ion-icon class="ms-1"
-                            name="chevron-forward-outline"></ion-icon>
-                    </button>
+                <div class="col-md-6">
+                    <label for="paymentMethod" class="form-label">Selecciona un método</label>
+                    <select class="form-select" id="paymentMethod" required>
+                        <option value="" disabled selected>Selecciona...</option>
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="mercado">Mercado Pago</option>
+                    </select>
                 </div>
-            </div>
-
-            <div class="col-12 row mb-3 mx-auto">
-                <div class="col-lg-6 col-md-12 habitaciones rounded-start-3 row p-3">
-                    <p class="col-12 mt-auto">
-                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
-                        <span class="text-capitalize text-black fs-4">The Estates de cuatro habitaciones</span>
-                    </p>
-                    <hr class="col-2">
-                    <p>Este impactante espacio de doble altura, ofrece una cocina espectacular con comedor, cuatro
-                        recámaras, cinco baños y una terraza perimetral con una gran piscina.</p>
-                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
-                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnCuatroHabitaciones">
-                        detalles completos de la habitacion<ion-icon class="ms-1"
-                            name="chevron-forward-outline"></ion-icon>
-                    </button>
-                </div>
-                <img src="../images/resorts/estates/cuatrohabitaciones.jpg" alt=""
-                    class="col-lg-6 col-md-12 rounded-end-3">
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="roomDetailsModal" tabindex="-1" aria-labelledby="roomDetailsModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title w-100 text-center" id="roomDetailsModalLabel"></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" id="cuerpoModal">
-
-                        </div>
+            
+                <!-- Campos tarjeta: se ocultan inicialmente -->
+                <div id="cardFields" class="row g-3 d-none">
+                    <div class="col-md-6">
+                        <label for="cardNumber" class="form-label">Número de Tarjeta</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cardName" class="form-label">Nombre en la Tarjeta</label>
+                        <input type="text" class="form-control" id="cardName" placeholder="Nombre completo">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="expDate" class="form-label">Fecha Exp.</label>
+                        <input type="text" class="form-control" id="expDate" placeholder="MM/AA">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="123">
                     </div>
                 </div>
-            </div>
-        </section>
 
+                <div id="paypalButton" class="col-12 d-none text-center">
+                    <a href="https://www.paypal.com/" target="_blank" class="btn btn-primary">Pagar con PayPal</a>
+                </div>
+                <div id="mercadoButton" class="col-12 d-none text-center">
+                    <a href="https://www.mercadopago.com/" target="_blank" class="btn btn-info text-white">Pagar con Mercado Pago</a>
+                </div>
 
-        <section class="col-lg-8 col-md-12 mx-auto my-5">
-            <h3 class="text-center mb-4">Comentarios</h3>
-            <form class="mb-4" id="commentForm">
-                <div class="mb-3">
-                    <label for="commentName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="commentName" placeholder="Ingresa tu nombre">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-dark">Reservar</button>
                 </div>
-                <div class="mb-3">
-                    <label for="commentText" class="form-label">Comentario</label>
-                    <textarea class="form-control" id="commentText" rows="4" placeholder="Escribe tu comentario"></textarea>
-                </div>
-                <button type="button" class="btn btn-dark" id="submitComment">Enviar Comentario</button>
             </form>
-            <div id="commentsSection">
-                <h5 class="mb-3">Comentarios Recientes</h5>
-                <div id="comentarios"></div>
-            </div>
-        </section>
 
+        </section>
 
     </main>
 
@@ -387,20 +306,21 @@
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white text-decoration-none">Nuestra Historia</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Sostenibilidad</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Carreras</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
-                    </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Síguenos</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
-                        <a href="#" class="text-white"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
-                        <a href="#" class="text-white"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
-                        <a href="#" class="text-white"><ion-icon name="logo-youtube" size="large"></ion-icon></a>
-                    </div>
+                <li><a href="#" class="text-white text-decoration-none">Carreras</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase">Síguenos</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+                    <a href="#" class="text-white"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
+                    <a href="#" class="text-white"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+                    <a href="#" class="text-white"><ion-icon name="logo-youtube" size="large"></ion-icon></a>
                 </div>
             </div>
+        </div>
         </div>
     </footer>
 
@@ -427,8 +347,7 @@
     </div>
 </body>
 <script src="../js/nav.js"></script>
-<script src="../js/descripcionEstates.js" type="module"></script>
-<script type="module" src="../js/comentariosEstates.js"></script>
+<script type="module" src="../js/reservaEstates.js"></script>
 <script src="../plugins/bootstrap.bundle.js"></script>
 
 </html>

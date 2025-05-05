@@ -1,4 +1,4 @@
-import { buscarDocumentosPorCampo } from '../js/firebase/crud.js'
+import { buscarDocumentosPorCampo, editarDocumento } from '../js/firebase/crud.js'
 
 const btnUnaHabitacion = document.getElementById('btnUnaHabitacion');
 const btnDosHabitaciones = document.getElementById('btnDosHabitaciones');
@@ -66,12 +66,12 @@ btnUnaHabitacion.addEventListener('click', () => {
 
     roomDetailsModalLabel.textContent = 'The Estates de Una Recamara';
     cuerpoModal.appendChild(suite);
+    
     const btnVerificarUna = document.getElementById('btnVerificarUno');
     btnVerificarUna.addEventListener('click', async () => {
         const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "una habitacion");
         const disponibles = habitaciones.filter(habitacion => habitacion.estado === "disponible").length;
-        console.log(disponibles);
-
+        
         const disponibilidad = document.getElementById('disponibilidad');
         if (disponibles != 0) {
             disponibilidad.className = 'text-success';
@@ -82,6 +82,24 @@ btnUnaHabitacion.addEventListener('click', () => {
         }
 
     })
+
+const btnReservarUna = document.getElementById('btnReservarUna');
+btnReservarUna.addEventListener('click',async () => {
+    const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "una habitacion");
+    const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
+    if (habitacionDisponible) {
+        console.log(habitacionDisponible);
+        
+        localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
+        console.log('hola');
+        
+        location.href = '../views/reservaEstates.html';
+    } else {
+        alert('No hay habitaciones disponibles.');
+    }
+    
+})
+
 });
 
 btnDosHabitaciones.addEventListener('click', () => {
@@ -172,6 +190,24 @@ btnDosHabitaciones.addEventListener('click', () => {
             disponibilidad.textContent = `Lo Sentimos, Hay ${disponibles} Habitaciones Disponibles`
         }
     })
+
+const btnReservarDos = document.getElementById('btnReservarDos');
+btnReservarDos.addEventListener('click',async () => {
+    const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "dos habitaciones");
+    const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
+    if (habitacionDisponible) {
+        console.log(habitacionDisponible);
+        
+        localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
+        console.log('hola');
+        
+        location.href = '../views/reservaEstates.html';
+    } else {
+        alert('No hay habitaciones disponibles.');
+    }
+    
+})
+
 });
 
 btnTresHabitaciones.addEventListener('click', () => {
@@ -266,6 +302,24 @@ btnTresHabitaciones.addEventListener('click', () => {
             disponibilidad.textContent = `Lo Sentimos, Hay ${disponibles} Habitaciones Disponibles`
         }
     })
+
+    const btnReservarTres = document.getElementById('btnReservarTres');
+    btnReservarTres.addEventListener('click',async () => {
+        const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "tres habitaciones");
+        const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
+        if (habitacionDisponible) {
+            console.log(habitacionDisponible);
+            
+            localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
+            console.log('hola');
+            
+            location.href = '../views/reservaEstates.html';
+        } else {
+            alert('No hay habitaciones disponibles.');
+        }
+        
+    })
+
 });
 
 btnCuatroHabitaciones.addEventListener('click', () => {
@@ -361,5 +415,23 @@ btnCuatroHabitaciones.addEventListener('click', () => {
             disponibilidad.textContent = `Lo Sentimos, Hay ${disponibles} Habitaciones Disponibles`
         }
     })
+
+    const btnReservarCuatro = document.getElementById('btnReservarCuatro');
+    btnReservarCuatro.addEventListener('click',async () => {
+        const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "cuatro habitaciones");
+        const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
+        if (habitacionDisponible) {
+            console.log(habitacionDisponible);
+            
+            localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
+            console.log('hola');
+            
+            location.href = '../views/reservaEstates.html';
+        } else {
+            alert('No hay habitaciones disponibles.');
+        }
+        
+    })
+
 });
 

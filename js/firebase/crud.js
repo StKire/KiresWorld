@@ -26,6 +26,18 @@ export const guardarDocumento = async (coleccion, id, datos) => {
     }
 };
 
+// Guardar documento en una colección con ID generado automáticamente
+export const guardarDocumentoIdAutomatico = async (coleccion, datos) => {
+    try {
+        const docRef = await addDoc(collection(db, coleccion), datos);
+        console.log("✅ Documento guardado con éxito con ID:", docRef.id);
+        return docRef.id;
+    } catch (error) {
+        console.error("❌ Error al guardar documento:", error);
+        return null;
+    }
+};
+
 // Editar documento (merge) en una colección
 export const editarDocumento = async (coleccion, id, nuevosDatos) => {
     try {
