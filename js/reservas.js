@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Convertir a días
         const diasEstancia = diferencia / (1000 * 60 * 60 * 24);
 
-        await editarDocumento('habitacionesEstates', habitacionItem.id, {
+        await editarDocumento(habitacionItem.hotel, habitacionItem.id, {
             checkIn: inputCheckIn,
             checkOut: inputCheckOut,
             estado: 'reservado',

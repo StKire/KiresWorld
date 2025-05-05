@@ -3,7 +3,7 @@ body{
 }
 
 .header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(../images/resorts/estates/banner.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(../images/Welcome-To-The-Extraordinary.jpg);
     background-position: center;
     background-size: cover;
     height: 25vh;
