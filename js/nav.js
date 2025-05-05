@@ -96,10 +96,10 @@ navEventos.addEventListener('click', () => {
     const eventosContainer = document.createElement('div');
     eventosContainer.className = `col-12 d-flex gap-1 m-auto`;
     eventosContainer.innerHTML = `
-        <a href="" class="btn btn-dark eventos w-100 d-flex justify-content-center align-items-center text-decoration-none" id="navGruposEventos">
+        <a href="../views/eventos.html" class="btn btn-dark eventos w-100 d-flex justify-content-center align-items-center text-decoration-none" id="navGruposEventos">
         <h3 class="fs-4">Grupos y Eventos</h3>
         </a>
-        <a href="" class="btn btn-dark eventos w-100 d-flex justify-content-center align-items-center text-decoration-none" id="navBodas">
+        <a href="../views/bodas.html" class="btn btn-dark eventos w-100 d-flex justify-content-center align-items-center text-decoration-none" id="navBodas">
         <h3 class="fs-4">Bodas</h3>
         </a>
     `;

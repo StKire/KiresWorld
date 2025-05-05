@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Subir JSON a Firestore</title>
+    <script type="module">
+        // 👉 Configuración de Firebase (reemplaza con la tuya)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB_2x62XB4nz5llZNa4lw3vu5Wlq8PoOhE",
+            authDomain: "kire-s-world.firebaseapp.com",
+            projectId: "kire-s-world",
+            storageBucket: "kire-s-world.firebasestorage.app",
+            messagingSenderId: "833477285520",
+            appId: "1:833477285520:web:3fd86382cfb5bb3d47aa15"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 👉 Manejar archivo JSON
+        window.handleFile = async function (event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = async function (e) {
+                const contenido = e.target.result;
+                try {
+                    const datos = JSON.parse(contenido);
+                    document.getElementById("vista").textContent = JSON.stringify(datos, null, 2);
+
+                    document.getElementById("subirBtn").onclick = async () => {
+                        const coleccion = collection(db, "habitacionesMayanPalace");
+                        for (const item of datos) {
+                            if (item.id) {
+                                const docRef = doc(coleccion, String(item.id));
+                                await setDoc(docRef, item);
+                            } else {
+                                console.error("El objeto no tiene el campo 'matricula':", item);
+                            }
+                        }
+                        alert("✅ Datos subidos a Firestore.");
+                    };
+                } catch (error) {
+                    alert("Error al leer el archivo JSON");
+                }
+            };
+            reader.readAsText(file);
+        };
+    </script>
+</head>
+
+<body>
+    <h2>Subir JSON a Firestore</h2>
+    <input type="file" accept=".json" onchange="handleFile(event)">
+    <button id="subirBtn">Subir a Firestore</button>
+    <pre id="vista"
+        style="background: #f4f4f4; padding: 10px; margin-top: 20px; max-height:90vh; overflow: auto;"></pre>
+</body>
+
+</html>
