@@ -88,12 +88,12 @@ btnReservarUna.addEventListener('click',async () => {
     const habitaciones = await buscarDocumentosPorCampo("habitacionesEstates", "habitacion", "una habitacion");
     const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
     if (habitacionDisponible) {
-        console.log(habitacionDisponible);
+        habitacionDisponible.hotel ='habitacionesEstates';
         
         localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
         console.log('hola');
         
-        location.href = '../views/reservaEstates.html';
+        location.href = '../views/reservas.html';
     } else {
         alert('No hay habitaciones disponibles.');
     }
@@ -197,11 +197,11 @@ btnReservarDos.addEventListener('click',async () => {
     const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
     if (habitacionDisponible) {
         console.log(habitacionDisponible);
-        
+        habitacionDisponible.hotel ='habitacionesEstates';
         localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
         console.log('hola');
         
-        location.href = '../views/reservaEstates.html';
+        location.href = '../views/reservas.html';
     } else {
         alert('No hay habitaciones disponibles.');
     }
@@ -309,11 +309,11 @@ btnTresHabitaciones.addEventListener('click', () => {
         const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
         if (habitacionDisponible) {
             console.log(habitacionDisponible);
-            
+            habitacionDisponible.hotel ='habitacionesEstates';
             localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
             console.log('hola');
             
-            location.href = '../views/reservaEstates.html';
+            location.href = '../views/reservas.html';
         } else {
             alert('No hay habitaciones disponibles.');
         }
@@ -422,11 +422,11 @@ btnCuatroHabitaciones.addEventListener('click', () => {
         const habitacionDisponible = habitaciones.find(habitacion => habitacion.estado === "disponible");
         if (habitacionDisponible) {
             console.log(habitacionDisponible);
-            
+            habitacionDisponible.hotel ='habitacionesEstates';
             localStorage.setItem('habitacion', JSON.stringify(habitacionDisponible));
             console.log('hola');
             
-            location.href = '../views/reservaEstates.html';
+            location.href = '../views/reservas.html';
         } else {
             alert('No hay habitaciones disponibles.');
         }
