@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Mayan.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <title>
+        World The Grand Mayan
+    </title>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-flex d-lg-none flex-wrap w-100 z-3">
+        <div class="container nav-justified">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../images/logo.png" alt="" style="width: 50px;">
+            </a>
+            <div class="navbar-brand text-center contactos text-white px-2" style="background: #c29c75;">
+                <span class="linkc fs-6">55-7076-0820</span>
+                <p><span class="linkc fs-6">Contactanos</span> | <span class="linkc fs-6">Noticias</span></p>
+            </div>
+            <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span>
+                    <ion-icon name="menu-outline" class="text-white"></ion-icon>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto w-100 h-100">
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Destinos
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/nayarit.html">Nuevo
+                                        Nayarit-Vallarta</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/riviera.html">Riviera
+                                        Maya</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/cabos.html">Los Cabos</a>
+                                </li>
+                                <li><a class="btn text-white btn-dark nav-link"
+                                        href="../views/acapulco.html">Acapulco</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/puerto.html">Puerto
+                                        Peñasco</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/vallarta.html">Puerto
+                                        Vallarta</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Resorts
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/Estates.html">The
+                                        Estates</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/Grand.html">Grand
+                                        Luxxe</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/DeLuxxe.html">DeLuxxe At
+                                        The Grand Mayan</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/Kingdom.html">Kingdom Of
+                                        The Sun</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/Bliss.html">The Grand
+                                        Bliss</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/Mayan.html">The Grand
+                                        Mayan</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/Celebrate.html">Celebrate
+                                        Park</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="../views/Palace.html">Mayan
+                                        Palace</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Entretenimiento</a></li>
+                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Gastronomia</a></li>
+                    <li class="nav-item"><a href="" class="btn text-white btn-dark nav-link">Transporte</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle btn text-white btn-dark nav-link" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Eventos
+                            </button>
+                            <ul class="dropdown-menu bg-dark border-dark-subtle">
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Grupos y Eventos</a></li>
+                                <li><a class="btn text-white btn-dark nav-link" href="#">Bodas</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="btn text-white btn-dark nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                Iniciar Sesion
+                            </button>
+                            <div class="dropdown-menu bg-dark border-0 p-4 text-white">
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormEmail2" class="form-label">Correo Electronico</label>
+                                    <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+                                        placeholder="email@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword2"
+                                        placeholder="Password">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                        <label class="form-check-label" for="dropdownCheck2">
+                                            Recordar Contraseña
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-light btnIngresar">Ingresar</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="navbar navbar-expand-lg bg-dark p-0 m-0 d-none d-lg-flex flex-wrap w-100 z-3 position-sticky top-0"
+        style="z-index: 1060 !important;">
+        <div class="container nav-justified">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../images/logo.png" alt="" style="width: 50px;">
+            </a>
+            <div class="navbar-brand text-center text-white px-2" style="background: #c29c75;">
+                <span class="linkc fs-6">55-7076-0820</span>
+                <p><span class="linkc fs-6">Contactanos</span> | <span class="linkc fs-6">Noticias</span></p>
+            </div>
+            <button class="navbar-toggler btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span>
+                    <ion-icon name="menu-outline" class="text-white"></ion-icon>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto w-100 h-100">
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navDestinos">Destinos</button>
+                    </li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navResorts">Resorts</button>
+                    </li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Entretenimiento</a></li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Gastronomia</a></li>
+
+                    <li class="nav-item"><a href="#" class="btn text-white btn-dark nav-link">Transporte</a></li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navEventos">Eventos</button>
+                    </li>
+
+                    <li class="nav-item"><button class="btn text-white btn-dark nav-link dropdown-toggle"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="navLogin">Iniciar
+                            Sesion</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Top -->
+    <div class="offcanvas offcanvas-top h-75 w-75 mx-auto" tabindex="-1" id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header bg-dark text-white mt-5 pt-5">
+            <h5 class="offcanvas-title w-100 text-center" id="offcanvasTopLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-dark text-white">
+            <div class="container h-75">
+                <div class="row h-100 " id="navOffcanvas">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header
+        class="head top-0 start-0 w-100 position-relative header d-flex justify-content-center align-items-center flex-column text-light gap-0">
+        <h2 style="font-size: 3em;" class="">The Grand Mayan</h2>
+        <hr class="w-25">
+        <span class="fs-5">Resorts</span>
+    </header>
+
+    <main class="row my-5 ">
+        <div class="col-lg-7 col-md-12 mx-auto row">
+            <h3 class="w-100 text-center mb-4 text-uppercase">Un mundo privado de lujo</h3>
+            <p class="w-100 text-center">Descubre la perfección: el máximo lujo en plena naturaleza. The Estates ya está
+                abierto en Nuevo Vallarta y Riviera Maya, y próximamente abrirá una tercera ubicación en Cabo del Este.
+                En The Estates, podrás disfrutar de las mejores vacaciones de lujo en este remanso de serenidad que
+                nutre el alma y comodidad absoluta.</p>
+            <img src="../images/logos/grandmayan.png" alt="" class="w-25 mx-auto mb-3 p-2 mt-2 img-fluid bg-black">
+        </div>
+
+        <div id="carouselExample" class="carousel slide col-lg-6 mx-auto col-md-12 my-lg-5">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active">
+                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-1.jpg"
+                        class="img-fluid w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-2.jpg"
+                        class="img-fluid w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-3.jpg"
+                        class="img-fluid w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-4.jpg"
+                        class="img-fluid w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/resorts/estates/Vidanta-Resort-Hotels-The-Estates-Gallery-5.jpg"
+                        class="img-fluid w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <section class="col-lg-8 col-md-12 p-3 mx-auto row">
+            <h3 class="w-100 text-center mb-3">Habitaciones y Suites</h3>
+
+            <div class="col-12 row mb-3 mx-auto">
+
+                <img src="../images/resorts/estates/unaHabitacion.jpg" alt=""
+                    class="col-lg-6 col-md-12 rounded-start-3">
+
+                <div class="col-lg-6 col-md-12 habitaciones rounded-end-3 row p-3">
+                    <p class="col-12 mt-auto">
+                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
+                        <span class="text-capitalize text-black fs-4">The Estates de Una Recamara</span>
+                    </p>
+                    <hr class="col-2">
+                    <p>Este impresionante espacio cuenta con una cocina gourmet con comedor, un dormitorio, dos baños y
+                        una gran terraza privada.</p>
+                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnUnaHabitacion">
+                        detalles completos de la habitacion<ion-icon class="ms-1"
+                            name="chevron-forward-outline"></ion-icon>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="col-12 row mb-3 mx-auto">
+                <div class="col-lg-6 col-md 12 habitaciones rounded-start-3 row p-3">
+                    <p class="col-12 mt-auto">
+                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
+                        <span class="text-capitalize text-black fs-4">The Estates de dos habitaciones</span>
+                    </p>
+                    <hr class="col-2">
+                    <p>Este increíble espacio ofrece una cocina gourmet con comedor, dos recámaras, tres baños y una
+                        terraza privada con una pequeña piscina..</p>
+                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnDosHabitaciones">
+                        detalles completos de la habitacion<ion-icon class="ms-1"
+                            name="chevron-forward-outline"></ion-icon>
+                    </button>
+                </div>
+                <img src="../images/resorts/estates/doshabitaciones.jpg" alt=""
+                    class="col-lg-6 col-md-12 rounded-end-3">
+            </div>
+
+            <div class="col-12 row mb-3 mx-auto">
+                <img src="../images/resorts/estates/treshabitaciones.jpg" alt=""
+                    class="col-lg-6 col-md-12 rounded-start-3">
+
+                <div class="col-lg-6 col-md-12 habitaciones rounded-end-3 row p-3">
+                    <p class="col-12 mt-auto">
+                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
+                        <span class="text-capitalize text-black fs-4">The Estates de tres habitaciones</span>
+                    </p>
+                    <hr class="col-2">
+                    <p>Este lujoso espacio ofrece una cocina gourmet con comedor, tres recámaras, cinco baños y una
+                        terraza privada con una pequeña piscina.</p>
+                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnTresHabitaciones">
+                        detalles completos de la habitacion<ion-icon class="ms-1"
+                            name="chevron-forward-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-12 row mb-3 mx-auto">
+                <div class="col-lg-6 col-md-12 habitaciones rounded-start-3 row p-3">
+                    <p class="col-12 mt-auto">
+                        <span class="text-uppercase text-dark-emphasis fs-5">habitaciones y suites</span><br>
+                        <span class="text-capitalize text-black fs-4">The Estates de cuatro habitaciones</span>
+                    </p>
+                    <hr class="col-2">
+                    <p>Este impactante espacio de doble altura, ofrece una cocina espectacular con comedor, cuatro
+                        recámaras, cinco baños y una terraza perimetral con una gran piscina.</p>
+                    <button class="col-12 btn btn-dark text-uppercase d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#roomDetailsModal" id="btnCuatroHabitaciones">
+                        detalles completos de la habitacion<ion-icon class="ms-1"
+                            name="chevron-forward-outline"></ion-icon>
+                    </button>
+                </div>
+                <img src="../images/resorts/estates/cuatrohabitaciones.jpg" alt=""
+                    class="col-lg-6 col-md-12 rounded-end-3">
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="roomDetailsModal" tabindex="-1" aria-labelledby="roomDetailsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title w-100 text-center" id="roomDetailsModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="cuerpoModal">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="col-lg-8 col-md-12 mx-auto my-5">
+            <h3 class="text-center mb-4">Comentarios</h3>
+            <form class="mb-4" id="commentForm">
+                <div class="mb-3">
+                    <label for="commentName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="commentName" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="commentText" class="form-label">Comentario</label>
+                    <textarea class="form-control" id="commentText" rows="4" placeholder="Escribe tu comentario"></textarea>
+                </div>
+                <button type="button" class="btn btn-dark" id="submitComment">Enviar Comentario</button>
+            </form>
+            <div id="commentsSection">
+                <h5 class="mb-3">Comentarios Recientes</h5>
+                <div id="comentarios"></div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="text-white pt-5" style="background: #434343;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="text-uppercase">Kire's World</h5>
+                    <p>Descubre un mundo de lujo, entretenimiento y experiencias inolvidables en nuestros destinos
+                        exclusivos.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Explora</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#destinos" class="text-white text-decoration-none">Destinos</a></li>
+                        <li><a href="#resorts" class="text-white text-decoration-none">Resorts</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Entretenimiento</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Gastronomía</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Acerca de</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Nuestra Historia</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Sostenibilidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Carreras</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+                        <a href="#" class="text-white"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
+                        <a href="#" class="text-white"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+                        <a href="#" class="text-white"><ion-icon name="logo-youtube" size="large"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="d-none d-lg-block row" style="background: #252525;">
+        <div class="col-7 mx-auto">
+            <div class="w-100 d-flex gap-1">
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/estates.svg" alt="Estates Resort"
+                        class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/grandluxxe.svg"
+                        alt="Grand Luxxe Resort" class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/grandbliss.svg"
+                        alt="Grand Bliss Resort" class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/grandmayan.svg"
+                        alt="Grand Mayan Resort" class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/blissresorts.svg" alt="Bliss Resorts"
+                        class="img-fluid object-fit-cover"></button>
+                <button class="btn w-100 h-75 my-auto"><img src="../images/zonas/mayanpalace.svg"
+                        alt="Mayan Palace Resort" class="img-fluid object-fit-cover"></button>
+            </div>
+        </div>
+    </section>
+    <div class="text-center p-3 text-light" style="background: #0c0c0c;">
+        <p class="mb-0">&copy; 2025 Kire's World. Todos los derechos reservados.</p>
+    </div>
+</body>
+<script src="../js/nav.js"></script>
+<script src="../js/descripcionMayan.js" type="module"></script>
+<script type="module" src="../js/comentariosMayan.js"></script>
+<script src="../plugins/bootstrap.bundle.js"></script>
+
+</html>
