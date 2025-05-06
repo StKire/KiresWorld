@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pdf.save(`ticket-reserva-${datos.id}.pdf`);
             document.body.removeChild(contenedor);
         });
+        
     }
 
 
@@ -184,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         enviarCorreoReserva(datos);
         descargarPDFReserva(datos);
-        // location.href = '../index.html'
+        
 
     })
 

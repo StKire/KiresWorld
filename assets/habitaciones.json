@@ -1,0 +1,365 @@
+[
+    {
+        "id": "1mpuh",
+        "habitacion": "una habitacion",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 11340,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "2mpuh",
+        "habitacion": "una habitacion",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 11340,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "3mpuh",
+        "habitacion": "una habitacion",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 11340,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "4mpuh",
+        "habitacion": "una habitacion",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 11340,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "5mpuh",
+        "habitacion": "una habitacion",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 11340,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+
+    {
+        "id": "1mpdh",
+        "habitacion": "dos habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 13020,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "2mpdh",
+        "habitacion": "dos habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 13020,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "3mpdh",
+        "habitacion": "dos habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 13020,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "4mpdh",
+        "habitacion": "dos habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 13020,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "5mpdh",
+        "habitacion": "dos habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 13020,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+
+    {
+        "id": "1mpth",
+        "habitacion": "tres habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 14490,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "2mpth",
+        "habitacion": "tres habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 14490,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "3mpth",
+        "habitacion": "tres habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 14490,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "4mpth",
+        "habitacion": "tres habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 14490,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "5mpth",
+        "habitacion": "tres habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 14490,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+
+    {
+        "id": "1mpch",
+        "habitacion": "cuatro habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 17010,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "2mpch",
+        "habitacion": "cuatro habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 17010,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "3mpch",
+        "habitacion": "cuatro habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 17010,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "4mpch",
+        "habitacion": "cuatro habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 17010,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    },
+    {
+        "id": "5mpch",
+        "habitacion": "cuatro habitaciones",
+        "disponibilidad": "Disponible",
+        "estado": "disponible",
+        "precioPorNoche": 17010,
+        "noches": 0,
+        "reservado": {
+            "idCliente": "",
+            "nombre": "",
+            "correo": "",
+            "metodoPago": "",
+            "comentarios": ""
+        },
+        "fechaReserva": "",
+        "checkIn": "",
+        "checkOut": ""
+    }
+]
