@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Habitación:</strong> ${datos.habitacion}</p>
             <p><strong>Noches:</strong> ${datos.noches}</p>
             <p><strong>Total:</strong> $${total}</p>
-            <p><strong>Pago:</strong> ${datos.metodoPago}</p>
+            <p><strong>Pago:</strong> ${datos.reservado.metodoPago}</p>
             <p><strong>ID:</strong> ${datos.id}</p>
             <div id="qrReserva" style="margin-top: 20px;"></div>
         `;
