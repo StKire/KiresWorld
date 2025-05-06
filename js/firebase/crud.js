@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, collection, setDoc, doc, query, where, getDocs, writeBatch, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getFirestore, collection, setDoc, doc, getDoc, query, where, getDocs, writeBatch, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 
 // Configuración de Firebase
@@ -67,6 +67,27 @@ export const buscarDocumentoPorCampo = async (coleccion, campo, valor) => {
     }
 };
 
+export const buscarDocumentoPorId = async (coleccion, id) => {
+    try {
+        const referencia = doc(db, coleccion, id);
+        const documento = await getDoc(referencia);
+
+        if (documento.exists()) {
+            return {
+                id: documento.id,
+                ...documento.data(),
+                coleccion
+            };
+        } else {
+            console.warn(`📭 No se encontró el documento con ID: ${id}`);
+            return null;
+        }
+    } catch (error) {
+        console.error("❌ Error al buscar documento por ID:", error);
+        return null;
+    }
+};
+
 // Borrar documentos por un campo específico
 export const borrarDocumentosPorCampo = async (coleccion, campo, valor) => {
     try {
@@ -112,6 +133,30 @@ export const buscarDocumentosPorCampo = async (coleccion, campo, valor) => {
         console.error("❌ Error al buscar documentos:", error);
         return [];
     }
+};
+
+// Buscar en múltiples colecciones por un campo y valor dado
+export const buscarEnVariasColeccionesPorCampo = async (colecciones, campo, valor) => {
+    const resultados = [];
+    
+    for (const coleccion of colecciones) {
+        try {       
+            const q = query(collection(db, coleccion), where(campo, "==", valor));
+            const snapshot = await getDocs(q);
+
+            const documentos = snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data(),
+                coleccion // Añadimos de qué colección viene
+            }));
+
+            resultados.push(...documentos);
+        } catch (error) {
+            console.error(`❌ Error en la colección "${coleccion}":`, error);
+        }
+    }
+
+    return resultados;
 };
 
 // Actualizar múltiples documentos por un campo específico
