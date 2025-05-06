@@ -108,33 +108,236 @@ navEventos.addEventListener('click', () => {
     navOffcanvas.appendChild(eventosContainer);
 });
 
-navLogin.addEventListener('click',()=>{
+navLogin.addEventListener('click', () => {
     navOffcanvas.innerHTML = ``;
 
     const loginContainer = document.createElement('div');
-    loginContainer.className = `bg-dark border-0 col-6  m-auto p-4 text-white`
+    loginContainer.className = `bg-dark border-0 col-12 mx-auto p-4 text-white`
     loginContainer.innerHTML = `
-        <div class="mb-3">
-            <label for="exampleDropdownFormEmail2" class="form-label">Correo Electronico</label>
-            <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+        <div class="mb-3 d-flex justify-content-center flex-column">
+            <label for="lblBuscar" class="form-label w-100 text-center">Correo Electronico</label>
+            <input type="email" class="form-control" id="lblBuscar"
                 placeholder="email@example.com">
+                <button class="btn btn-light btnIngresar mt-3 w-25 mx-auto" id="btnBuscar">Buscar</button>
         </div>
-        <div class="mb-3">
-            <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleDropdownFormPassword2"
-                placeholder="Password">
+
+        <div id="panelSesion">
         </div>
-        <div class="mb-3">
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                <label class="form-check-label" for="dropdownCheck2">
-                    Recordar Contraseña
-                </label>
-            </div>
-        </div>
-        <button class="btn btn-light btnIngresar">Ingresar</button>
     `;
 
-    offcanvasTopLabel.textContent = 'Inicio de Sesion';
+    offcanvasTopLabel.textContent = 'Busqueda de Informacion con Correo o Celular';
     navOffcanvas.appendChild(loginContainer);
+
+    const panelSesion = document.getElementById('panelSesion');
+    const btnBuscar = document.getElementById('btnBuscar');
+
+    btnBuscar.addEventListener('click', async () => {
+        const lblBuscar = document.getElementById('lblBuscar').value;
+        const busqueda = await buscarDocumentoPorCampo('trabajadores', 'correo', lblBuscar);
+
+        if (busqueda) {
+            btnBuscar.classList.add('d-none');
+            const pass = document.createElement('div');
+            pass.className = "d-flex justify-content-center flex-column";
+            pass.innerHTML = `
+            <label for="lblpassword" class="form-label w-100 text-center">Contraseña</label>
+            <input type="password" id="lblpassword" class="form-control" placeholder="constraseña">
+            <button class="btn btn-light btnIngresar mt-3 w-25 mx-auto" id="btnIngresar">Ingresar</button>
+            `
+            panelSesion.appendChild(pass);
+
+            document.getElementById('btnIngresar').addEventListener('click', () => {
+                const pass = document.getElementById('lblpassword').value;
+
+                if (busqueda.password === pass) {
+                    location.href = '../views/admin.html'
+                }
+            })
+
+
+        } else {
+            const opciones = document.createElement('div');
+            opciones.className = `row`;
+            opciones.innerHTML = `
+            <hr class="mb-5">
+            
+            <div class="col-5 mx-auto h-75 overflow-x-hidden overflow-y-auto">
+            <h3>Historial de Reservas</h3>
+                <div class="col-12" id="historial">
+                </div>
+            </div>
+            
+            <div class="col-5 mx-auto h-75 overflow-x-hidden overflow-y-auto" >
+            <h3>Promixas Reservas</h3>
+                <div class="col-12" id="reservas">
+            
+                </div>
+            </div>
+            `
+            panelSesion.appendChild(opciones);
+
+            const historialReservas = await buscarDocumentosPorCampo('historialReservas', 'reservado.correo', lblBuscar);
+            const historial = document.getElementById('historial');
+            historial.innerHTML = '';
+
+            historialReservas.forEach(data => {
+                const tarjeta = document.createElement('div');
+                tarjeta.className = 'card col-12 shadow-sm border-dark mb-3';
+
+                let motivoHTML = '';
+                if (data.estatus === 'cancelado') {
+                    motivoHTML = `<p class="card-text mb-1"><strong>Motivo de cancelación:</strong> ${data.motivoCancelacion || 'N/A'}</p>`;
+                }
+
+                tarjeta.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title text-uppercase">Habitación: ${data.habitacion || 'N/A'}</h5>
+                        <p class="card-text mb-1 text-capitalize"><strong>Nombre:</strong> ${data.reservado?.nombre || 'N/A'}</p>
+                        <p class="card-text mb-1"><strong>Correo:</strong> ${data.reservado?.correo || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Fecha de Reservación:</strong> ${data.fechaReserva || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Ingreso:</strong> ${data.checkIn || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Salida:</strong> ${data.checkOut || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Método de pago:</strong> ${data.reservado?.metodoPago || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Estatus de Reservación:</strong> ${data.estatus || 'N/A'}</p>
+                        ${motivoHTML}
+                    </div>
+                `;
+
+                historial.appendChild(tarjeta);
+            })
+
+
+            const colecciones = ['habitacionesCelebratePark', 'habitacionesDeLuxxeGrandMayan', 'habitacionesEstates', 'habitacionesGrandLuxxe', 'habitacionesKingdomSun',
+                'habitacionesMayanPalace', 'habitacionesTheGrandBliss', 'habitacionesTheGrandMayan'
+            ]
+            const reservas = await buscarEnVariasColeccionesPorCampo(colecciones, 'reservado.correo', lblBuscar);
+            const contenedor = document.getElementById('reservas');
+            contenedor.innerHTML = ''; // Limpia resultados previos
+
+            reservas.forEach(data => {
+                const tarjeta = document.createElement('div');
+                tarjeta.className = 'card col-12 shadow-sm border-dark mb-3';
+
+                tarjeta.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title text-uppercase">Habitación: ${data.habitacion || 'N/A'}</h5>
+                        <p class="card-text mb-1 text-capitalize"><strong>Nombre:</strong> ${data.reservado?.nombre || 'N/A'}</p>
+                        <p class="card-text mb-1"><strong>Correo:</strong> ${data.reservado?.correo || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Fecha de Reservación:</strong> ${data.fechaReserva || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Ingreso:</strong> ${data.checkIn || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Salida:</strong> ${data.checkOut || 'N/A'}</p>
+                        <p class="card-text mb-1 text-capitalize"><strong>Método de pago:</strong> ${data.reservado?.metodoPago || 'N/A'}</p>
+                        <button class="btn btn-danger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cancelarReservaModal"
+                                data-reserva='${JSON.stringify({ ...data })}'>
+                            Cancelar reserva
+                        </button>
+                    </div>
+                `;
+                contenedor.appendChild(tarjeta);
+            });
+
+
+        }
+
+    })
+});
+
+// Crear el modal dinámicamente
+function crearModalCancelarReserva() {
+    const modalHTML = `
+    <div class="modal fade mt-5" id="cancelarReservaModal" tabindex="-1" aria-labelledby="cancelarReservaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content border-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelarReservaModalLabel">Cancelar Reserva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCancelarReserva">
+                        <div id="resumenReserva" class="mb-3 text-dark small"></div>
+
+                        <div class="mb-3">
+                            <label for="metodoPagoCancelacion" class="form-label">Método de pago utilizado</label>
+                            <input type="text" class="form-control" id="metodoPagoCancelacion" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivoCancelacion" class="form-label">Motivo de cancelación</label>
+                            <textarea class="form-control" id="motivoCancelacion" rows="3" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger">Confirmar Cancelación</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+    const div = document.createElement('div');
+    div.innerHTML = modalHTML;
+    document.body.appendChild(div);
+}
+crearModalCancelarReserva();
+
+// Escuchar clicks en botones de cancelar
+document.addEventListener('click', (e) => {
+    const boton = e.target.closest('[data-bs-target="#cancelarReservaModal"]');
+    if (boton) {
+        const dataReserva = JSON.parse(boton.dataset.reserva);
+        window.reservaActual = dataReserva; // Guardar temporalmente
+
+        // Mostrar detalles en el modal
+        const resumen = `
+            <p class="text-capitalize"><strong>Habitación:</strong> ${dataReserva.habitacion || 'N/A'}</p>
+            <p class="text-capitalize"><strong>Nombre:</strong> ${dataReserva.reservado?.nombre || 'N/A'}</p>
+            <p><strong>Correo:</strong> ${dataReserva.reservado?.correo || 'N/A'}</p>
+            <p class="text-capitalize"><strong>Fecha de Reservacion:</strong> ${dataReserva.fechaReserva || 'N/A'}</p>
+            <p class="text-capitalize"><strong>Ingreso:</strong> ${dataReserva.checkIn || 'N/A'}</p>
+            <p class="text-capitalize"><strong>Salida:</strong> ${dataReserva.checkOut || 'N/A'}</p>
+        `;
+        document.getElementById('resumenReserva').innerHTML = resumen;
+    }
+});
+
+// Manejar envío del formulario
+document.addEventListener('submit', async (e) => {
+    if (e.target.id === 'formCancelarReserva') {
+        e.preventDefault();
+
+        const metodoPago = document.getElementById('metodoPagoCancelacion').value.trim();
+        const motivo = document.getElementById('motivoCancelacion').value.trim();
+
+        if (!metodoPago || !motivo) {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
+        window.reservaActual.estatus = 'cancelado'
+        window.reservaActual.motivoCancelacion = motivo;
+
+        await guardarDocumentoIdAutomatico('historialReservas', window.reservaActual);
+
+        const { id, coleccion } = window.reservaActual;
+
+        await editarDocumento(coleccion, id, {
+            checkIn: "",
+            checkOut: "",
+            estado: 'disponible',
+            fechaReserva: "",
+            noches: "",
+            reservado: {
+                correo: "",
+                nombre: "",
+                telefono: "",
+                metodoPago: ""
+            }
+        }
+        )
+
+        // Opcional: cerrar el modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('cancelarReservaModal'));
+        modal.hide();
+        location.reload();
+    }
 });

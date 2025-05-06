@@ -2,13 +2,60 @@ import { editarDocumento, buscarDocumentoPorId } from './firebase/crud.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    async function enviarCorreoReserva(datos) {
+        console.log(datos);
+        if (!datos.reservado.correo || !datos.reservado.nombre) {
+            alert("Faltan datos del cliente.");
+            return;
+        }
+    
+        const data = {
+            service_id: 'service_p4x8svi',
+            template_id: 'template_d536l72',
+            user_id: 'DQMdKcZWGA3WPhSsA',
+            template_params: {
+                'to_name': datos.reservado.nombre,        // Nombre del cliente
+                'to_email': datos.reservado.correo,       // Correo del cliente
+                'telefono': datos.reservado.telefono,     // Teléfono del cliente
+                'destino': datos.destino,       // Destino de la reserva
+                'checkIn': datos.checkIn,       // Fecha de check-in
+                'checkOut': datos.checkOut,     // Fecha de check-out
+                'habitacion': datos.habitacion, // Habitaciones reservadas
+                'metodoPago': datos.reservado.metodoPago  // Método de pago
+            }
+        };
+        
+        
+        try {
+            const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+    
+            if (response.ok) {
+                alert('¡Correo de reserva enviado con éxito!');
+            } else {
+                const text = await response.text();
+                console.log(response);
+                
+                throw new Error(`Error ${response.status}: ${text}`);
+                
+            }
+        } catch (error) {
+            alert('Error al enviar: ' + error.message);
+        }
+    }
+    
+
+
     async function crearContenidoReserva(datos, callback) {
         const qrData = JSON.stringify(datos);
         const canvasQR = document.createElement('canvas');
         canvasQR.width = 150;
         canvasQR.height = 150;
         await QRCode.toCanvas(canvasQR, qrData);
-    
+
         const contenedor = document.createElement("div");
         contenedor.style.position = "fixed";
         contenedor.style.left = "-9999px";
@@ -16,9 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         contenedor.style.padding = "20px";
         contenedor.style.fontFamily = "Arial, sans-serif";
         contenedor.style.background = "#fff";
-    
+
         const total = datos.noches * datos.precioPorNoche;
-    
+
         contenedor.innerHTML = `
             <div style="text-align:center;">
                 <h2>Kires World</h2>
@@ -35,10 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>ID:</strong> ${datos.id}</p>
             <div id="qrReserva" style="margin-top: 20px;"></div>
         `;
-    
+
         document.body.appendChild(contenedor);
         contenedor.querySelector('#qrReserva').appendChild(canvasQR);
-    
+
         callback(contenedor);
     }
 
@@ -55,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(contenedor);
         });
     }
-    
+
 
 
     const habitacionItem = JSON.parse(localStorage.getItem('habitacion'));
@@ -65,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const lblResort = document.getElementById('lblResort');
     lblResort.value = habitacionItem.hotel.replace(/^habitaciones/, '').replace(/([A-Z])/g, ' $1').trim();
-    
+
 
     const paymentSelect = document.getElementById('paymentMethod');
     const cardFields = document.getElementById('cardFields');
@@ -133,8 +180,11 @@ document.addEventListener('DOMContentLoaded', () => {
         )
 
         const datos = await buscarDocumentoPorId(habitacionItem.hotel, habitacionItem.id);
+        console.log(datos);
+        
+        enviarCorreoReserva(datos);
         descargarPDFReserva(datos);
-        location.href = '../index.html'
+        // location.href = '../index.html'
 
     })
 
